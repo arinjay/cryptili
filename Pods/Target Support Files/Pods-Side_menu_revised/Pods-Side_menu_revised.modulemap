@@ -1,0 +1,6 @@
+framework module Pods_Side_menu_revised {
+  umbrella header "Pods-Side_menu_revised-umbrella.h"
+
+  export *
+  module * { export * }
+}
