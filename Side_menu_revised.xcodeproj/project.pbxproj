@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		12116A57201645DC009C9054 /* customClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12116A56201645DC009C9054 /* customClass.swift */; };
+		124057C92017350C00854E2F /* TabularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124057C82017350C00854E2F /* TabularViewController.swift */; };
+		124057D02017377400854E2F /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124057CE2017377400854E2F /* CustomTableViewCell.swift */; };
+		124057D12017377400854E2F /* customnib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 124057CF2017377400854E2F /* customnib.xib */; };
 		12C61BDB1FCAEE7B000295BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C61BDA1FCAEE7B000295BE /* AppDelegate.swift */; };
 		12C61BDD1FCAEE7B000295BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C61BDC1FCAEE7B000295BE /* ViewController.swift */; };
 		12C61BE01FCAEE7B000295BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12C61BDE1FCAEE7B000295BE /* Main.storyboard */; };
@@ -21,6 +24,9 @@
 /* Begin PBXFileReference section */
 		002D2AAB045D3185BCB727E1 /* Pods-Side_menu_revised.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Side_menu_revised.release.xcconfig"; path = "Pods/Target Support Files/Pods-Side_menu_revised/Pods-Side_menu_revised.release.xcconfig"; sourceTree = "<group>"; };
 		12116A56201645DC009C9054 /* customClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customClass.swift; sourceTree = "<group>"; };
+		124057C82017350C00854E2F /* TabularViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabularViewController.swift; sourceTree = "<group>"; };
+		124057CE2017377400854E2F /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		124057CF2017377400854E2F /* customnib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = customnib.xib; sourceTree = "<group>"; };
 		12C61BD71FCAEE7B000295BE /* Side_menu_revised.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Side_menu_revised.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12C61BDA1FCAEE7B000295BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12C61BDC1FCAEE7B000295BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +78,7 @@
 				12DA3E0A201637B100632D66 /* Controller */,
 				12C61BE11FCAEE7B000295BE /* Assets.xcassets */,
 				12C61BE61FCAEE7B000295BE /* Info.plist */,
+				124057CE2017377400854E2F /* CustomTableViewCell.swift */,
 			);
 			path = Side_menu_revised;
 			sourceTree = "<group>";
@@ -91,6 +98,7 @@
 			children = (
 				12C61BE31FCAEE7B000295BE /* LaunchScreen.storyboard */,
 				12C61BDE1FCAEE7B000295BE /* Main.storyboard */,
+				124057CF2017377400854E2F /* customnib.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -100,6 +108,7 @@
 			children = (
 				12C61BDA1FCAEE7B000295BE /* AppDelegate.swift */,
 				12C61BDC1FCAEE7B000295BE /* ViewController.swift */,
+				124057C82017350C00854E2F /* TabularViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -185,6 +194,7 @@
 			files = (
 				12C61BE51FCAEE7B000295BE /* LaunchScreen.storyboard in Resources */,
 				12C61BE21FCAEE7B000295BE /* Assets.xcassets in Resources */,
+				124057D12017377400854E2F /* customnib.xib in Resources */,
 				12C61BE01FCAEE7B000295BE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,7 +267,9 @@
 				12116A57201645DC009C9054 /* customClass.swift in Sources */,
 				12C61BDD1FCAEE7B000295BE /* ViewController.swift in Sources */,
 				12C61BED1FCB18CC000295BE /* roundButton.swift in Sources */,
+				124057D02017377400854E2F /* CustomTableViewCell.swift in Sources */,
 				12C61BDB1FCAEE7B000295BE /* AppDelegate.swift in Sources */,
+				124057C92017350C00854E2F /* TabularViewController.swift in Sources */,
 				12C61BEF1FCB1999000295BE /* gradients.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,8 +409,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = QSHU6W7M8B;
 				INFOPLIST_FILE = Side_menu_revised/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arinjay.Cryptili;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -413,8 +426,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = QSHU6W7M8B;
 				INFOPLIST_FILE = Side_menu_revised/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arinjay.Cryptili;
 				PRODUCT_NAME = "$(TARGET_NAME)";

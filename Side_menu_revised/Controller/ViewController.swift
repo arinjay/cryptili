@@ -37,6 +37,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var rankLbl: UILabel!
     @IBOutlet weak var priceLbl: UILabel!
     
+    @IBAction func dismissSideMenu(_ sender: UIButton) {
+        leadingConstraint.constant = -120
+    }
     let url = "https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCINR"
     
     override func viewDidLoad() {

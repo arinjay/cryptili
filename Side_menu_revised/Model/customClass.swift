@@ -13,7 +13,5 @@ struct Herostats: Decodable {
     let percent_change_1h: String
     let percent_change_24h: String
     let percent_change_7d: String
-    let rank: String
-    let available_supply: String
-    let market_cap_usd: String
+    let price_usd: String
 }
