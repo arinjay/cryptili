@@ -10,13 +10,13 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-extension NSLayoutConstraint {
-    
-    override open var description: String {
-        let id = identifier ?? ""
-        return "id: \(id), constant: \(constant)" //you may print whatever you want here
-    }
-}
+//extension NSLayoutConstraint {
+//
+//    override open var description: String {
+//        let id = identifier ?? ""
+//        return "id: \(id), constant: \(constant)"
+//    }
+//}
 
 class ViewController: UIViewController {
 
@@ -93,9 +93,15 @@ class ViewController: UIViewController {
             let convertResult = String(bitresult3)
             hourlyChangeLbl2.text = "₹ " + convertResult
         }
+       
         if let bitResult4 = json["changes"]["price"]["day"].double{
             let converResult = String(bitResult4)
             dayChangeLbl.text = "₹ " + converResult
+            if checkForPrice(data:  bitResult4) {
+                dayChangeLbl.textColor = UIColor.red
+            }else{
+                dayChangeLbl.textColor = UIColor.green
+            }
         }
         if let bitResult5 = json["averages"]["day"].double{
             let converResult = String(bitResult5)
@@ -104,8 +110,13 @@ class ViewController: UIViewController {
         if let bitResult6 = json["changes"]["percent"]["week"].double{
             let converResult = String(bitResult6)
             avlSupplyLbl.text = converResult + " %"
+            if checkForPrice(data: bitResult6) {
+                avlSupplyLbl.textColor = UIColor.red
+            } else {
+                avlSupplyLbl.textColor = UIColor.green
+            }
         }
-        
+    
         else{
             print("Poor Internet Connection")
         }
@@ -113,6 +124,14 @@ class ViewController: UIViewController {
         
     }
 
+    func checkForPrice(data: Double) -> Bool{
+        if data > 0 {
+            return false
+        }
+        else {
+            return true
+        }
+    }
     
     
     
@@ -134,11 +153,20 @@ class ViewController: UIViewController {
     // MARK: Slide menu functions:
     @IBAction func showMenu(_ sender: UIBarButtonItem) {
         if(isOpen){
+            
+            UIView.animate(withDuration: 0.4, animations: {
+                self.sideView.alpha = 1
+            })
             leadingConstraint.constant = -120
+            
             isOpen = !isOpen
         }
         else{
+            UIView.animate(withDuration: 0.4, animations: {
+                self.sideView.alpha = 1
+            })
             leadingConstraint.constant = 0
+            
             isOpen = !isOpen
         }
     }

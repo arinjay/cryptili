@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -47,13 +46,13 @@
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.37 %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRV-lI-MuI">
-                                        <rect key="frame" x="60" y="371" width="111" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.37 %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRV-lI-MuI">
+                                        <rect key="frame" x="52" y="371" width="126" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.37 %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvH-p6-pzu">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.37 %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvH-p6-pzu">
                                         <rect key="frame" x="193" y="370" width="140" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
@@ -130,6 +129,10 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="white_back" translatesAutoresizingMaskIntoConstraints="NO" id="aI4-O9-Yqo">
+                                        <rect key="frame" x="60" y="-9" width="10" height="19"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -144,8 +147,8 @@
                                     <constraint firstItem="t7T-YN-G36" firstAttribute="top" secondItem="Gqc-LF-dZx" secondAttribute="top" id="sH7-q3-Ryp"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vKN-ua-4QG">
-                                <rect key="frame" x="0.0" y="64" width="120" height="603"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vKN-ua-4QG">
+                                <rect key="frame" x="-120" y="64" width="120" height="603"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQf-2Z-Jvf">
                                         <rect key="frame" x="34" y="76" width="61" height="58"/>
@@ -196,7 +199,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.073097008013213879" green="0.072064824829859292" blue="0.1907122461928934" alpha="0.82071382705479456" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.23889593908629436" green="0.14617821333377953" blue="0.21420908226998917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="kQf-2Z-Jvf" firstAttribute="top" secondItem="vKN-ua-4QG" secondAttribute="top" constant="76" id="8UW-3u-nw8"/>
                                     <constraint firstItem="GTs-1w-uQO" firstAttribute="leading" secondItem="vKN-ua-4QG" secondAttribute="leading" constant="30" id="IX6-ZZ-oYw"/>
@@ -349,7 +352,6 @@
                                 <color key="backgroundColor" red="0.8653680682182312" green="0.66080451011657715" blue="0.17626568675041199" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7dG-PV-oRN" secondAttribute="height" multiplier="62:7" id="G4X-YZ-TLF"/>
-                                    <constraint firstAttribute="width" constant="310" id="Nzm-fW-5Yv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <state key="normal" title="Sign up">
@@ -367,10 +369,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAy-F7-gEq" customClass="roundButton" customModule="Side_menu_revised" customModuleProvider="target">
                                 <rect key="frame" x="32" y="538" width="310" height="39"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="nAy-F7-gEq" secondAttribute="height" multiplier="310:39" id="GWy-ke-VwF"/>
-                                    <constraint firstAttribute="width" constant="310" id="hhT-VQ-9Bb"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.0062438516218982906" green="0.0064839784263959199" blue="0.0013448529283608486" alpha="0.54307878519999997" colorSpace="custom" customColorSpace="sRGB"/>
@@ -470,5 +468,6 @@
         <image name="mail" width="100" height="79"/>
         <image name="menu" width="88" height="74"/>
         <image name="notification" width="100" height="102"/>
+        <image name="white_back" width="212" height="199"/>
     </resources>
 </document>

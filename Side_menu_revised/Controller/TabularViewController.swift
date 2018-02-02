@@ -70,22 +70,22 @@ class TabularViewController: UIViewController ,UITableViewDelegate , UITableView
         if checkForPrice(data: Double(heros[indexPath.row].percent_change_1h)!){
             cell.label3.text = "1h: " + heros[indexPath.row].percent_change_1h + " %"
             cell.label3.textColor = UIColor.red
+        }else {
+            cell.label3.text = "1h: " + heros[indexPath.row].percent_change_1h + " %"
         }
         
         if checkForPrice(data: Double(heros[indexPath.row].percent_change_24h)!){
-            cell.label4.text = "1h: " + heros[indexPath.row].percent_change_24h + " %"
+            cell.label4.text = "1d: " + heros[indexPath.row].percent_change_24h + " %"
             cell.label4.textColor = UIColor.red
+        }else{
+            cell.label4.text = "4h: " + heros[indexPath.row].percent_change_24h + " %"
         }
         
         if checkForPrice(data: Double(heros[indexPath.row].percent_change_7d)!){
-            cell.label5.text = "1h: " + heros[indexPath.row].percent_change_7d + " %"
+            cell.label5.text = "7d: " + heros[indexPath.row].percent_change_7d + " %"
             cell.label5.textColor = UIColor.red
-        }
-        
-        else{
-            cell.label3.text = "1h: " + heros[indexPath.row].percent_change_1h + " %"
-            cell.label4.text = "1h: " + heros[indexPath.row].percent_change_24h + " %"
-             cell.label5.text = "1h: " + heros[indexPath.row].percent_change_7d + " %"
+        }else {
+            cell.label5.text = "5h: " + heros[indexPath.row].percent_change_7d + " %"
         }
         
         return cell

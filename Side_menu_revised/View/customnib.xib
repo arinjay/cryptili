@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -37,22 +36,13 @@
                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bqf-7X-IdW">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bqf-7X-IdW">
                         <rect key="frame" x="90" y="63" width="50" height="16"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Bqf-7X-IdW" secondAttribute="height" multiplier="25:8" id="Ce7-BU-RmW"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Meq-d9-IAU">
-                        <rect key="frame" x="175" y="63" width="60" height="16"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="Meq-d9-IAU" secondAttribute="height" multiplier="15:4" id="9vI-fB-HYT"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <color key="textColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="234000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SuM-K1-Idb">
@@ -64,10 +54,19 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1G-7m-Kvr">
-                        <rect key="frame" x="240" y="63" width="55" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1G-7m-Kvr">
+                        <rect key="frame" x="236" y="63" width="64" height="16"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="M1G-7m-Kvr" secondAttribute="height" multiplier="11:4" constant="11" id="1S6-js-izI"/>
+                            <constraint firstAttribute="width" secondItem="M1G-7m-Kvr" secondAttribute="height" multiplier="11:4" constant="20" id="1S6-js-izI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Meq-d9-IAU">
+                        <rect key="frame" x="175" y="63" width="60" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Meq-d9-IAU" secondAttribute="height" multiplier="15:4" id="rBr-Oz-05H"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -75,17 +74,18 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="M1G-7m-Kvr" secondAttribute="trailing" constant="21" id="5Rx-pX-Ms2"/>
+                    <constraint firstAttribute="trailing" secondItem="M1G-7m-Kvr" secondAttribute="trailing" constant="16" id="5Rx-pX-Ms2"/>
                     <constraint firstItem="SuM-K1-Idb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="34" id="5ha-4K-9J1"/>
                     <constraint firstItem="i24-r5-dsu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="5iN-BI-i5v"/>
                     <constraint firstItem="i24-r5-dsu" firstAttribute="leading" secondItem="Dfp-H0-6XT" secondAttribute="trailing" constant="24" id="6F8-k2-03H"/>
                     <constraint firstAttribute="bottom" secondItem="Bqf-7X-IdW" secondAttribute="bottom" constant="15.5" id="7iE-t5-7LR"/>
                     <constraint firstItem="Dfp-H0-6XT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="8cQ-eD-ZU7"/>
+                    <constraint firstAttribute="bottom" secondItem="Meq-d9-IAU" secondAttribute="bottom" constant="15.5" id="92n-YT-Roy"/>
                     <constraint firstAttribute="trailing" secondItem="SuM-K1-Idb" secondAttribute="trailing" constant="16" id="92x-TD-tSr"/>
-                    <constraint firstAttribute="bottom" secondItem="Meq-d9-IAU" secondAttribute="bottom" constant="15.5" id="Jqc-bV-VB9"/>
+                    <constraint firstItem="Meq-d9-IAU" firstAttribute="leading" secondItem="Bqf-7X-IdW" secondAttribute="trailing" constant="35" id="FBc-FG-bQv"/>
                     <constraint firstAttribute="bottom" secondItem="Dfp-H0-6XT" secondAttribute="bottom" constant="22.5" id="Q0U-8R-bdb"/>
                     <constraint firstAttribute="bottom" secondItem="M1G-7m-Kvr" secondAttribute="bottom" constant="15.5" id="hTX-y2-yIj"/>
-                    <constraint firstItem="Meq-d9-IAU" firstAttribute="leading" secondItem="Bqf-7X-IdW" secondAttribute="trailing" constant="35" id="lBs-Ii-kbP"/>
+                    <constraint firstItem="Meq-d9-IAU" firstAttribute="top" secondItem="SuM-K1-Idb" secondAttribute="bottom" constant="8" id="iq9-Vc-euv"/>
                     <constraint firstItem="Dfp-H0-6XT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="22" id="mUs-5g-ppd"/>
                     <constraint firstItem="Bqf-7X-IdW" firstAttribute="leading" secondItem="Dfp-H0-6XT" secondAttribute="trailing" constant="24" id="oi1-si-4kZ"/>
                     <constraint firstItem="M1G-7m-Kvr" firstAttribute="top" secondItem="SuM-K1-Idb" secondAttribute="bottom" constant="8" id="p0c-lk-Vow"/>
