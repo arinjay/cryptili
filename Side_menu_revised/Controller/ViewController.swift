@@ -55,8 +55,6 @@ class ViewController: UIViewController {
         getBitcoinData(url: url)
     }
     
-   
-    
     
     func getBitcoinData(url: String) {
         
@@ -125,12 +123,7 @@ class ViewController: UIViewController {
     }
 
     func checkForPrice(data: Double) -> Bool{
-        if data > 0 {
-            return false
-        }
-        else {
-            return true
-        }
+        return data > 0 ? false : true
     }
     
     

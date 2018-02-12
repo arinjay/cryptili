@@ -11,12 +11,21 @@ import UIKit
 class TabularViewController: UIViewController ,UITableViewDelegate , UITableViewDataSource {
 
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!{
+        didSet {
+            tableView.delegate = self
+            tableView.dataSource = self
+        }
+    }
+
     var heros = [Herostats]()
-    var imgArray = [UIImage]()
-    
-    
-    
+    var imgArray : [UIImage] = [
+                                UIImage(named: "icon1.png")!, UIImage(named: "icon2.png")!, UIImage(named: "icon3.png")!
+                                , UIImage(named: "icon1.png")!, UIImage(named: "icon5.jpg")!, UIImage(named: "icon6.png")!,
+                                UIImage(named: "icon7.png")!, UIImage(named: "icon8.png")!, UIImage(named: "icon9.png")!,UIImage(named: "icon1.png")!
+                                ]
+
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,8 +34,9 @@ class TabularViewController: UIViewController ,UITableViewDelegate , UITableView
             self.tableView.reloadData()
         }
         
-        tableView.delegate = self
-        tableView.dataSource = self
+        
+        
+        
         
         // using Custom Xib file
         tableView.register(UINib(nibName: "customnib", bundle: nil), forCellReuseIdentifier: "showData")
@@ -34,23 +44,10 @@ class TabularViewController: UIViewController ,UITableViewDelegate , UITableView
         self.tableView.backgroundColor = UIColor.init(red: 44/255, green: 44/255, blue: 44/255, alpha: 1)
         configureTableView()
         
+        
         //tranparent navigation bar
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         
-        // building imageArray
-        imgArray.append(UIImage(named: "icon1.png")!)
-        imgArray.append(UIImage(named: "icon2.png")!)
-        imgArray.append(UIImage(named: "icon3.png")!)
-        imgArray.append(UIImage(named: "icon1.png")!)
-        imgArray.append(UIImage(named: "icon5.jpg")!)
-        imgArray.append(UIImage(named: "icon6.png")!)
-        imgArray.append(UIImage(named: "icon7.png")!)
-        imgArray.append(UIImage(named: "icon8.png")!)
-        imgArray.append(UIImage(named: "icon9.png")!)
-        imgArray.append(UIImage(named: "icon1.jpg")!)
-        
-        
-
     
     }
 
@@ -78,14 +75,14 @@ class TabularViewController: UIViewController ,UITableViewDelegate , UITableView
             cell.label4.text = "1d: " + heros[indexPath.row].percent_change_24h + " %"
             cell.label4.textColor = UIColor.red
         }else{
-            cell.label4.text = "4h: " + heros[indexPath.row].percent_change_24h + " %"
+            cell.label4.text = "1d: " + heros[indexPath.row].percent_change_24h + " %"
         }
         
         if checkForPrice(data: Double(heros[indexPath.row].percent_change_7d)!){
             cell.label5.text = "7d: " + heros[indexPath.row].percent_change_7d + " %"
             cell.label5.textColor = UIColor.red
         }else {
-            cell.label5.text = "5h: " + heros[indexPath.row].percent_change_7d + " %"
+            cell.label5.text = "7d: " + heros[indexPath.row].percent_change_7d + " %"
         }
         
         return cell
@@ -105,24 +102,21 @@ class TabularViewController: UIViewController ,UITableViewDelegate , UITableView
     
     // helper function for checking price
     func checkForPrice(data: Double) -> Bool{
-        if data > 0 {
-            return false
-        }
-        else {
-            return true
-        }
+        return data > 0 ? false : true
     }
     
     
     func downloadJSON(completed: @escaping () -> ()) {
         let url = URL(string: "https://api.coinmarketcap.com/v1/ticker/?limit=10")
         
-        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+        //URLSession.shared.dataTask(with: url!) { (data, response, error) in
+        URLSession.shared.dataTask(with: url!) { [weak self](data, response, error) in
             
+        
             if error == nil {
                 do
                 {
-                    self.heros = try JSONDecoder().decode([Herostats].self, from: data!)
+                    self?.heros = try JSONDecoder().decode([Herostats].self, from: data!)
                     DispatchQueue.main.async {
                         completed()
                     }
